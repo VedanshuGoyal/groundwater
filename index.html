@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Groundwater Resources of India · MOJUD prototype</title>
+    <meta name="description" content="Dynamic groundwater resources of India by state, district and assessment unit (GEC-2015). A MOJUD prototype built on public INGRES data; not an official CGWB website." />
+    <meta name="theme-color" content="#f9f9f7" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0d0d0d" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="./data/2025-2026/summary.json" as="fetch" crossorigin>
+    <script>
+      // Apply a saved theme before first paint so there is no flash.
+      try { const t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t } catch {}
+    </script>
+    <script type="module" crossorigin src="./assets/index-BOIvFwxk.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CQ1sM3DJ.css">
+  </head>
+  <body>
+    <div id="app"></div>
+    <noscript>This dashboard needs JavaScript to draw the map.</noscript>
+  </body>
+</html>
