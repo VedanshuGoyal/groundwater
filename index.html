@@ -12,8 +12,12 @@
     <script>
       // Apply a saved theme before first paint so there is no flash.
       try { const t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t } catch {}
+      // Ask for the map archive's header now rather than after the 1 MB map library loads: on a cold CDN
+      // (first visit after a quiet spell) this first request is the slow one. The browser caches the reply,
+      // so the map's own identical request is answered locally.
+      fetch('./tiles/ingres.pmtiles', { headers: { Range: 'bytes=0-16383' } }).catch(() => {})
     </script>
-    <script type="module" crossorigin src="./assets/index-Dn6SE325.js"></script>
+    <script type="module" crossorigin src="./assets/index-C6bpabmD.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-DyrrwPty.css">
   </head>
   <body>
